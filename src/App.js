@@ -1,22 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+
+const organisations = [
+  {
+      id: 5,
+      name: "Adoptees"
+  },
+  {
+      id: 6,
+      name: "ODEL"
+  }
+  
+  ]
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {organisations.map(function(organisations) {
+          return <div>{organisations.id} = {organisations.name}</div>;
+        })}
       </header>
     </div>
   );
