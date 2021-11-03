@@ -16,9 +16,14 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {organisations.map(function(organisations) {
-          return <div>{organisations.id} = {organisations.name}</div>;
-        })}
+        {organisations.map((organisation) => {
+            return (
+              <div key={organisation.id}>
+                {organisation.name}
+              </div>
+            );
+          })
+        }
       </header>
     </div>
   );
