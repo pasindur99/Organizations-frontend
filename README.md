@@ -1,4 +1,3 @@
-# Organizations-frontend
 Frontend for organisations site.
 =======
 # Getting Started with Create React App
