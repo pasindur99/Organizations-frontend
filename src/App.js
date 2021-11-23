@@ -1,34 +1,25 @@
 import './App.css';
+import Organisations from "./Organizations";
+import {useState} from "react";
 
-const organisations = [
-  {
-      id: 5,
-      name: "Adoptees"
-  },
-  {
-      id: 6,
-      name: "ODEL"
-  }
-  ]
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <Organisations />
-      </header>
-    </div>
-  );
-}
-
-function Organisations() {
-  return organisations.map((organisation) => {
+    const [color, setColor] = useState("#008cc4");
     return (
-      <div key={organisation.id}>
-        {organisation.name}
-      </div>
+        <div>
+            <div style={{background:color}}>
+                <Organisations/>
+                <button onClick={() => setColor("Blue")}>
+                    Blue
+                </button>
+                <button onClick={() => setColor("Red")}>
+                    Red
+                </button>
+            </div>
+        </div>
+
     );
-  })
 }
 
 export default App;
