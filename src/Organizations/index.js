@@ -2,23 +2,8 @@ import React from "react";
 import {Card, CardBody, CardSubtitle, CardText, CardTitle} from "reactstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const organisations = [
-    {
-        "id": "1",
-        "name": "Adoptees"
-    },
-    {
-        "id": "2",
-        "name": "PawLK"
-    },
-    {
-        "id": "3",
-        "name": "PetSo"
-    }
-]
-
-function Organisations() {
-    return organisations.map((organisation) => {
+function Organisations(props) {
+    return props.organisations.map((organisation) => {
         return (
             <div key={organisation.id}>
                 <Card>
