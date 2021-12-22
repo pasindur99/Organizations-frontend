@@ -1,5 +1,6 @@
 import React from "react";
 import {Card, CardBody, CardSubtitle, CardText, CardTitle} from "reactstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const organisations = [
     {
@@ -19,12 +20,7 @@ const organisations = [
 function Organisations() {
     return organisations.map((organisation) => {
         return (
-            <div>
-                {/*<div>*/}
-                {/*    <div key={organisation.id}>*/}
-                {/*        {organisation.name}*/}
-                {/*    </div>*/}
-                {/*</div>*/}
+            <div key={organisation.id}>
                 <Card>
                     <CardBody>
                         <CardTitle tag="h5">
